@@ -1,21 +1,21 @@
 import { createClient } from 'contentful'
 import type { NextPage } from 'next'
 import RecipeCard from '../components/RecipeCard'
-const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-})
 
 export async function getStaticProps() {
 
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  })
 
   const res = await client.getEntries({ content_type: "recipe" })
 
   return {
     props: {
       recipes: res.items,
-      revalidate: 1
-    }
+    },
+    revalidate: 1
   }
 }
 
