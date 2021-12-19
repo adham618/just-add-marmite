@@ -16,6 +16,7 @@ const RecipeCard: React.FC<recipeProps> = ({ recipe }) => {
           width={320}
           height={250}
           alt="thumbnail"
+          draggable="false"
         />
       </div>
       <div className="content">
@@ -38,15 +39,15 @@ const RecipeCard: React.FC<recipeProps> = ({ recipe }) => {
           margin: 0;
           position: relative;
           top: -40px;
-          left: 86px;
-          width:400px
+          left: 130px;
+          width:300px
         }
         .info {
           padding: 3px;
         }
-        @media (max-width:1150px){
+        @media (max-width:900px){
           .content {
-            left: 66px;
+            right: 277px;
           }
         }
         

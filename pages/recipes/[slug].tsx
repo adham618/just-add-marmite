@@ -52,6 +52,7 @@ const RecipeDetails: React.FC<RecipeDetailsProps> = ({ recipe }) => {
           width={1150}
           height={250}
           alt='banner'
+          draggable="false"
         />
         <h2>{title}</h2>
       </div>
