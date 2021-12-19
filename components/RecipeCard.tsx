@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 interface recipeProps {
@@ -10,6 +11,12 @@ const RecipeCard: React.FC<recipeProps> = ({ recipe }) => {
     <div className="card">
       <div className="featured">
         {/* featured image */}
+        <Image
+          src={"https:" + thumbnail.fields.file.url}
+          width={thumbnail.fields.file.details.image.width}
+          height={thumbnail.fields.file.details.image.height}
+          alt="thumbnail"
+        />
       </div>
       <div className="content">
         <div className="info">
