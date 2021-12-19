@@ -13,8 +13,8 @@ const RecipeCard: React.FC<recipeProps> = ({ recipe }) => {
         {/* featured image */}
         <Image
           src={"https:" + thumbnail.fields.file.url}
-          width={thumbnail.fields.file.details.image.width}
-          height={thumbnail.fields.file.details.image.height}
+          width={320}
+          height={250}
           alt="thumbnail"
         />
       </div>
@@ -30,6 +30,7 @@ const RecipeCard: React.FC<recipeProps> = ({ recipe }) => {
       <style jsx>{`
         .card {
           transform: rotateZ(-1deg);
+          text-align:center
         }
         .content {
           background: #fff;
@@ -37,13 +38,20 @@ const RecipeCard: React.FC<recipeProps> = ({ recipe }) => {
           margin: 0;
           position: relative;
           top: -40px;
-          left: -10px;
+          left: 86px;
+          width:400px
         }
         .info {
-          padding: 16px;
+          padding: 3px;
         }
+        @media (max-width:1150px){
+          .content {
+            left: 66px;
+          }
+        }
+        
         .info h4 {
-          margin: 4px 0;
+          margin: 0;
           text-transform: uppercase;
         }
         .info p {
@@ -51,14 +59,14 @@ const RecipeCard: React.FC<recipeProps> = ({ recipe }) => {
           color: #777;
         }
         .actions {
-          margin-top: 20px;
+          margin-top: 3px;
           display: flex;
           justify-content: flex-end;
         }
         .actions a {
           color: #fff;
           background: #f01b29;
-          padding: 16px 24px;
+          padding: 5px 8px;
           text-decoration: none;
         }
       `}</style>

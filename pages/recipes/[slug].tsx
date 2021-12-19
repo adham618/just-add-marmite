@@ -31,7 +31,8 @@ export const getStaticProps = async ({ params }) => {
   })
 
   return {
-    props: { recipe: items[0] }
+    props: { recipe: items[0] },
+    revalidate: 1
   }
 
 }
@@ -81,6 +82,11 @@ const RecipeDetails: React.FC<RecipeDetailsProps> = ({ recipe }) => {
         }
         .info p {
           margin: 0;
+        }
+        @media(max-width:700px){
+          h2{
+            font-size:1rem
+          }
         }
         .info span::after {
           content: ", ";

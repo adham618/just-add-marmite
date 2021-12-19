@@ -14,6 +14,7 @@ export async function getStaticProps() {
   return {
     props: {
       recipes: res.items,
+      revalidate: 1
     }
   }
 }
@@ -30,7 +31,13 @@ const Recipes: NextPage = ({ recipes }) => {
         .recipe-list {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          grid-gap: 20px 60px;
+          text-align:center
+        }
+        @media (max-width:930px){
+          .recipe-list {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
         }
       `}</style>
 
