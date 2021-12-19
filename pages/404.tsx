@@ -8,7 +8,14 @@ const NotFound: React.FC = () => {
     setTimeout(() => {
       router.push("/")
     }, 4000);
-  }, [])
+  }, [router])
+  //if you want clear timout
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     router.push('/')
+  //   }, 5000)
+  //   return () => clearTimeout(timer);
+  // }, [router])
   return (
     <div className="not-found">
       <h1>404</h1>
