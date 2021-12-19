@@ -13,7 +13,7 @@ const Layout: React.FC = ({ children }) => {
           <Link href='/'>
             <a>
               <h1>
-                <span>ust Add</span>
+                <span>Just Add</span>
                 <span>Marmite</span>
               </h1>
               <h2>Spreed The Joy</h2>
