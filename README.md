@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Just Add Marmite
 
- you can view this site at [just-add-marmite-ebon.vercel.app]
+ you can view this site at [https://just-add-marmite-ebon.vercel.app]
  
 ![screenshot](https://user-images.githubusercontent.com/88515844/146691046-09eee8c1-8feb-4111-8fe4-6d2cb8f4486d.png)
 
